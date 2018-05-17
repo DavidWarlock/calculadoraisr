@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="files">Documentos XML</label>
+            <input class="form-control" (change)="onChangeFiles($event.target.files)" type="file" multiple>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Concepto</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let total of totales">
+                    <td>
+                        {{ total.Clave }}
+                    </td>
+                    <td>
+                        {{ total.Concepto }}
+                    </td>
+                    <td>
+                        {{ total.Importe }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Fecha Timbrado</th>
+                    <th>UUID</th>
+                    <th>Clave</th>
+                    <th>Concepto</th>
+                    <th>Importe</th>
+                    <th>Tipo Deducción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let impuesto of impuestos">
+                    <td>
+                        {{ impuesto.FechaTimbrado }}
+                    </td>
+                    <td>
+                        {{ impuesto.UUID }}
+                    </td>
+                    <td>
+                        {{ impuesto.Clave }}
+                    </td>
+                    <td>
+                        {{ impuesto.Concepto }}
+                    </td>
+                    <td>
+                        {{ impuesto.Importe }}
+                    </td>
+                    <td>
+                        {{ impuesto.TipoDeduccion }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
